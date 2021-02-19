@@ -1,0 +1,52 @@
+<view id="top">
+  <!-- 顶部 -->
+  <view class="navbar">
+    <view class="img"><navigator url="../tips/tips" hover-class="none">+</navigator></view>
+    <view class="nowday">{{date}}</view>
+  </view>
+
+  <view class="box">
+    <view class="container" bindtouchstart="tap" bindtouchmove="end" bindtouchend="end">
+      <view id="title">{{day}}</view>
+      <view id="content">{{content}}</view>
+      <view id="from">——— {{_from}}</view>
+
+      <view id="toast" wx:if="{{show}}">
+        <view class="content">{{content}}</view>
+        <view class="from">——— {{_from}}</view>
+      </view>
+      
+    </view>
+  </view>
+</view>
+<!-- top end -->
+
+<!-- tips begin -->
+<view class="tips_box">
+
+  <!-- 每个月份的 -->
+  <view wx:for="{{all}}" wx:if="{{item.length == 0 ? false : true}}" wx:for-index="index" wx:key="index">
+    <view class="date">💗 {{item[0].date.year}}年 {{index+1}}月 💗</view>
+    <!-- 当前月份的便签 -->
+    <view class="container">
+
+      <!-- 便签里面的每一项 -->
+      <view class="item" wx:for="{{item}}" wx:for-item="_item" data-id="{{_item._id}}" bindtap="navigator" wx:for-index="index" wx:key="index">
+        <view class="left">
+          <text>{{_item.date.day}}</text>
+          <text>{{_item.date.xingqi}}</text>
+          <text>{{_item.date.hours}}:{{_item.date.min}}</text>
+        </view>
+        <view class="center">
+          <input placeholder="添加标题,完成请按回车/完成键" placeholder-class="place" catchtap="javascript:;" bindconfirm="setTitle" data-id="{{_item._id}}" value="{{_item.title == undefined ? '' : _item.title}}"></input>
+          <view>{{_item.text}}</view>
+        </view>
+        <view class="right">
+          <image src="{{_item.url}}" mode="scaleToFill"></image>
+        </view>
+      </view>
+
+    </view>
+  </view>
+  
+</view>

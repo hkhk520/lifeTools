@@ -1,0 +1,11 @@
+<editor id="editor" show-img-size="true" show-img-resize="true" show-img-toolbar="true" bindtap="change"></editor>
+
+<button bindtap="_delete">删数据库</button>
+
+<view class="btns">
+  <view bindtap="bolder">B</view>
+  <image bindtap="italic" src="../../icons/italic.png"></image>
+  <image bindtap="uline" src="../../icons/uline.png"></image>
+  <image bindtap="addimg" src="../../icons/addimg.png"></image>
+  <image bindtap="finish" src="../../icons/finish.png"></image>
+</view>

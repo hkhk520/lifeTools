@@ -1,0 +1,40 @@
+<view class="bg">
+  <view class="icon">
+    <!-- 用户头像 -->
+    <open-data type="userAvatarUrl"></open-data>
+  </view>
+  <!-- 用户名 -->
+  <open-data class="username" type="userNickName"></open-data>
+</view>
+
+<!-- 设备信息 -->
+<view class="system">
+  <text class="info">设备信息</text>
+  <view>
+    <text>型号</text>
+    <text>{{model}}</text>
+  </view>
+  <view>
+    <text>版本</text>
+    <text>{{system.system}}</text>
+  </view>
+  <view>
+    <text>分辨率</text>
+    <text>{{system.screenWidth}} * {{system.screenHeight}}</text>
+  </view>
+  <view>
+    <text>地区</text>
+    <view class="city">
+      <open-data lang="zh_CN" type="userCountry"></open-data>
+      <open-data lang="zh_CN" type="userProvince"></open-data>
+      <open-data lang="zh_CN" type="userCity"></open-data>
+    </view>
+  </view>
+</view>
+<!-- 设备信息 end -->
+
+<!-- 系统设置 -->
+<view class="setting" bindtap="nextpage">
+  <text>系统设置</text>
+  <text>></text>
+</view>

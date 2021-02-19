@@ -1,0 +1,64 @@
+{
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于获取当前城市的天气"
+    }
+  },
+  "plugins": {
+    "routePlan": {
+      "version": "1.0.6",
+      "provider": "wx50b5593e81dd937a"
+    }
+  },
+  "pages": [
+    "pages/index/index",
+    "pages/map/map",
+    "pages/face/face",
+    "pages/note/note",
+    "pages/mine/mine",
+    "pages/setting/setting",
+    "pages/tips/tips"
+  ],
+  "window": {
+    "navigationStyle": "custom",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "selectedColor": "#00CC99",
+    "color": "#aaa",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "selectedIconPath": "asstes/icons/acweather.png",
+        "iconPath": "asstes/icons/weather.png"
+      },
+      {
+        "pagePath": "pages/map/map",
+        "text": "地图",
+        "selectedIconPath": "asstes/icons/acmap.png",
+        "iconPath": "asstes/icons/map.png"
+      },
+      {
+        "pagePath": "pages/face/face",
+        "text": "颜值",
+        "selectedIconPath": "asstes/icons/active_faceid.png",
+        "iconPath": "asstes/icons/faceid.png"
+      },
+      {
+        "pagePath": "pages/note/note",
+        "text": "便签",
+        "selectedIconPath": "icons/acnote.png",
+        "iconPath": "icons/note.png"
+      },
+      {
+        "pagePath": "pages/mine/mine",
+        "text": "我的",
+        "selectedIconPath": "asstes/icons/acmy.png",
+        "iconPath": "asstes/icons/my.png"
+      }
+    ]
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

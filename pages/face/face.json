@@ -1,0 +1,9 @@
+{
+  "navigationBarTextStyle": "white",
+  "navigationStyle":"default",
+  "navigationBarBackgroundColor":"#CC6666",
+  "navigationBarTitleText":"颜值检测",
+  "enablePullDownRefresh": true,
+  "backgroundTextStyle": "dark",
+  "backgroundColor": "#CC6666"
+}

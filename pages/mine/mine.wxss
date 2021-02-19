@@ -1,0 +1,70 @@
+.bg {
+  height: 560rpx;
+  background: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=55938722,1333565795&fm=26&gp=0.jpg) no-repeat center center/cover;
+
+  /* flex布局 */
+  display: flex;
+  /* 更改主轴方向 */
+  flex-direction: column;
+  /* 主轴居中 */
+  justify-content: center;
+  /* 交叉轴居中 */
+  align-items: center;
+}
+
+/* 用户头像 */
+.icon {
+  width: 150rpx;
+  height: 150rpx;
+  /* 圆角属性 */
+  border-radius: 50%;
+  overflow: hidden;
+}
+/* 用户头像 end */
+
+/* 用户名 begin */
+.username {
+  margin-top: 20rpx;
+}
+/* 用户名 end */
+
+/* 设备信息 begin */
+.system {
+  background-color: white;
+  padding-top: 40rpx;
+  padding-left: 20rpx;
+  box-sizing: border-box;
+}
+
+.info {
+  font-size: 34rpx;
+  color: #999;
+}
+
+.system>view,.setting {
+  padding: 28rpx 0;
+  /* 顶部的边框 */
+  border-top:1px solid #ddd;
+  padding-right: 20rpx;
+  display: flex;
+  justify-content: space-between;
+}
+
+.system>view>text:last-child,.setting>text:last-child {
+  color: #999;
+}
+
+.setting {
+  margin-top: 40rpx;
+  background-color: white;
+  border: none;
+  padding-left: 20rpx;
+}
+
+.city {
+  color: #999;
+}
+.city>open-data {
+  margin-left: 10rpx;
+}
+/* 设备信息 end */

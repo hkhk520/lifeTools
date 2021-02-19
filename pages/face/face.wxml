@@ -1,0 +1,26 @@
+<!-- 控制整张页面的背景 -->
+<view class="bg"></view> 
+
+<view class="box">
+  <view class="img" wx:if="{{flag}}">
+
+    <!-- 人脸上的小圆点 -->
+    <!-- <view class="i" wx:for="{{face_list.landmark72}}" style="left:{{item.x*n}}px; top:{{item.y*n}}px;"></view> -->
+
+    <image src="{{url}}" mode="widthFix"></image>
+    <view class="location" style="left:{{face_list.location.left*n}}px; top:{{face_list.location.top*n}}px; width:{{face_list.location.width*n}}px; height:{{face_list.location.height*n}}px; transform:rotate({{face_list.location.rotation}}deg); "></view>
+  </view>
+  
+  <!-- <text>人脸数量：</text> -->
+  <!-- 进行3步运算来显示中文 -->
+  <text wx:if="{{flag}}">性别： {{face_list.gender.type == null ? "" : face_list.gender.type == "male" ? "男" : "女"}}</text>
+  <text wx:if="{{flag}}">年龄： {{face_list.age}}</text>
+  <text wx:if="{{flag}}">颜值： {{face_list.beauty}}</text>
+  <text wx:if="{{flag}}">表情： {{face_list.gender.type == null ? "" : face_list.expression.type == "none" ? "不笑" : face_list.expression.type == "smile" ? "微笑" : "大笑"}}</text>
+  <text wx:if="{{flag}}">情绪： {{face_list.gender.type == null ? "" : face_list.emotion.type == "angry" ? "愤怒" : face_list.emotion.type == "disgust" ? "厌恶" : face_list.emotion.type == "fear" ? "恐惧" : face_list.emotion.type == "happy" ? "高兴" : face_list.emotion.type == "sad" ? "伤心" : face_list.emotion.type == "surprise" ? "惊讶" : face_list.emotion.type == "neutral" ? "无表情" : face_list.emotion.type == "pouty" ? "噘嘴" : "鬼脸"}}</text>
+  <text wx:if="{{flag}}">脸型： {{face_list.gender.type == null ? "" : face_list.face_shape.type == "square" ? "正方形" : face_list.face_shape.type == "triangle" ? "三角形" : face_list.face_shape.type == "oval" ? "椭圆" : face_list.face_shape.type == "heart" ? "心形" : "圆形"}}</text>
+  <text wx:if="{{flag}}">眼镜： {{face_list.gender.type == null ? "" : face_list.glasses.type == "none" ? "无眼镜" : face_list.glasses.type == "common" ? "普通眼镜" : "墨镜"}}</text>
+  <text wx:if="{{flag}}">类别： {{face_list.gender.type == null ? "" : face_list.face_type.type == "human" ? "真实人脸" : "卡通人脸"}}</text>
+</view>
+
+<button bindtap="click"  type="warn">选择照片</button>

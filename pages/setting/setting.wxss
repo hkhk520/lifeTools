@@ -1,0 +1,13 @@
+.text {
+  font-size: 30rpx;
+  color: #000;
+  margin: 30rpx 20rpx 10rpx;
+
+}
+.slide {
+  width: 100%;
+  padding: 30rpx 20rpx;
+  margin: 0;
+  box-sizing: border-box;
+  background-color: white;
+}

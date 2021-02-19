@@ -1,0 +1,5 @@
+<cover-view class="btn" bindtap="click">
+  <cover-image class="icon" src="../../asstes/icons/icon.png"></cover-image>
+  <cover-view>请输入地名或地址</cover-view>
+</cover-view>
+<map longitude="{{location.longitude}}" latitude="{{location.latitude}}" scale="13" show-location="true"></map>

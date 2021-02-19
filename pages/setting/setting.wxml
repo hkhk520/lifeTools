@@ -1,0 +1,2 @@
+ <view class="text">屏幕亮度设置</view>
+ <slider class="slide" value="{{value}}" show-value="true" bindchanging="changing"></slider>

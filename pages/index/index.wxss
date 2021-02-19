@@ -1,0 +1,285 @@
+page {
+  padding-top: 75rpx;  /* 使整个页面离顶部有一定距离，以免被手机顶部的显示覆盖 */
+  /* background: url(https://ss0.bdstatic.com/70cFvHSh_Q1YnxGkpoWK1HF6hhy/it/u=2852430573,3158551369&fm=11&gp=0.jpg) no-repeat center center/cover;
+  背景固定
+  background-attachment: fixed; */
+}
+.bg{
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -9;  /* 使其背景图片显示在最后面，即可被上面的其他元素覆盖 */
+  background: url(https://ss1.bdstatic.com/70cFvXSh_Q1YnxGkpoWK1HF6hhy/it/u=1981716005,410845208&fm=26&gp=0.jpg) no-repeat center center/cover;
+}
+.title{
+  font-weight: bold;
+  font-size: 40rpx;
+  margin-bottom: 20rpx;
+  text-align: center;
+  /* margin-right: 100rpx; */
+  color: white;
+}
+.navbar {
+  margin-top: 40rpx;
+  /* 绝对定位 */
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+.ipt {
+  width: 80%;
+  height: 50rpx;
+  padding: 5rpx 72rpx;
+  box-sizing: border-box;
+  border-bottom: 1px solid #ddd;
+  color: white;
+}
+.place{
+  font-size: 25rpx;
+  color: #efefef;
+}
+.img {
+  width: 50rpx;
+  height: 50rpx;
+  /* 相对定位 */
+  position: absolute;
+  left: 80rpx;  /* 由于.navbar开启flex布局，并居中，所以需要给左距离，以便显示 */
+  top: 0;
+}
+.locat_box{
+  height: 180rpx;
+  /* background: pink; */
+  margin: 22rpx 0;
+}
+.locat_box>.user{
+  display: flex;
+  align-items: center;
+}
+.user>view{
+  margin-left: 22rpx;
+}
+.locat_box .user .icon{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;  /* 给头像圆角 */
+  overflow: hidden;    /* 隐藏其超出的部分 */
+}
+.locat_box .user .name{
+  font-size: 32rpx;
+  color: white;
+}
+.city{
+  display: flex;
+  justify-content: space-between;
+  margin: 0 30rpx;
+}
+.city>.left{
+  /* height: 100rpx; */
+  display: flex;
+  align-items: center;
+  font-size: 48rpx;
+  color: white;
+}
+.city .right{
+  line-height: 120rpx;  /* 为了与left的内容居中显示 */
+  font-size: 28rpx;
+  color: white;
+}
+.locat{
+  width: 35rpx;
+  height: 35rpx;
+  margin-right: 16rpx;
+}
+
+.weather{
+  /* height: 640rpx; */
+  /* background-color: pink; */
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+}
+.tem{
+  height: 540rpx;
+  line-height: 540rpx;
+  font-size: 150rpx;
+  position: relative;
+  color: white;
+}
+.tem>text{
+  font-size: 50rpx;
+  position: absolute;
+  top: -30rpx;
+  bottom: 0;
+  right: -51rpx;
+  margin: auto;
+  color: white;
+}
+.weather>view:first-child{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 36rpx;
+  color: white;
+}
+
+/* 7天数据 */
+.allweather{
+  background-color: rgba(158, 153, 153, 0.233);
+  margin-top: 40rpx;
+}
+.allweather>.text{
+  text-align: center;
+  font-size: 36rpx;
+  border-bottom:1px solid #BBBBBB;
+  padding: 16rpx 0;
+  color: white;
+}
+scroll-view{
+  /* 因为里面的view是块级元素，会自动换行，所以要控制不换行：空白的部分不换行 */
+  white-space: nowrap;
+}
+scroll-view .item{
+  width: 30%;
+  display: inline-block;
+  font-size: 24rpx;
+  text-align: center;
+  color: white;
+}
+scroll-view .item>view{
+  padding: 16rpx 0;
+}
+/* 7天预报end */
+
+/* 天气详情 */
+.wea_detail{
+  margin-top: 30rpx;
+  height: 260rpx;
+  background-color: rgba(158, 153, 153, 0.233);
+  border-right: 1px solid #BBBBBB;
+  border-top: 1px solid #BBBBBB;
+  box-sizing: border-box;
+}
+.wea_detail>.item{
+  width: 25%;
+  height: 50%;
+  border-left: 1px solid #BBBBBB;
+  border-bottom: 1px solid #BBBBBB;
+  box-sizing: border-box;
+  float: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 36rpx;
+  color: white;
+}
+.wea_detail>.item>text:last-child{
+  font-size: 30rpx;
+  color: white;
+}
+/* 天气详情end */
+
+/* 24小时逐3小时预报 */
+.hours{
+  /* height: 320rpx; */
+  margin-top: 30rpx;
+  background-color: rgba(158, 153, 153, 0.233);
+}
+.hours>.text{
+  text-align: center;
+  font-size: 36rpx;
+  border-bottom:1px solid #BBBBBB;
+  padding: 16rpx 0;
+  color: white;
+}
+/* swiper-item{
+  padding-top: 20rpx;
+} */
+swiper-item .container{
+  width: 80%;
+  height: 80%;
+  margin-top: 20rpx;
+  margin-left: 20rpx;
+  padding-left: 64rpx;
+  box-sizing: border-box;
+  background-color: #3399CC;
+  border-radius: 80rpx;
+  font-size: 32rpx;
+  color: white;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+  position: relative;
+}
+swiper-item .container>text:last-child{
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -44rpx;   /* 由于有个定位，就需要调整下边距，不然就会居中显示 */
+  text-align: center;
+  /* margin: 20rpx 0; */
+}
+/* 24小时逐3小时预报 end */
+
+/* 生活指数 */
+.life{
+  /* height: 800rpx; */
+  margin-top: 30rpx;
+  background-color: rgba(158, 153, 153, 0.233);
+}
+.life>.text{
+  text-align: center;
+  font-size: 36rpx;
+  border-bottom:1px solid #BBBBBB;
+  padding: 16rpx 0;
+  color: white;
+}
+.life>.box{
+  /* height: 740rpx; */
+  margin: 0 20rpx;
+  /* background-color: palevioletred; */
+}
+.box>.item{
+  height: 140rpx;
+  /* background-color: palevioletred; */
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #BBBBBB;
+}
+.box>.item:last-child{
+  border: none;
+}
+.box image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.box .life_detail{
+  width: 76%;
+  height: 100%;
+  padding-left: 24rpx;
+  font-size: 32rpx;
+  color: white;
+  /* background-color: red; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.life_detail>text:first-child{
+  font-size: 34rpx;
+  color: white;
+}
+/* 生活指数end */
+
+/* 版权 */
+.logo{
+  padding: 20rpx 0;
+  font-size: 30rpx;
+  text-align: center;
+  color: white;
+}
+

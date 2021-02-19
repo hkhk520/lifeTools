@@ -1,0 +1,39 @@
+/* pages/map/map.wxss */
+/* 使得地图覆盖整个页面 */
+map{
+  width: 100%;
+  height: 100%;
+}
+.btn{
+  width: 600rpx;
+  /* height: 60rpx; */
+  padding-left: 80rpx;
+  box-sizing: border-box;
+  line-height: 60rpx;
+  color: #666;
+  font-size: 40rpx;
+
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 30rpx;
+  /* 盒子的底部阴影 */
+  box-shadow: 1rpx 1rpx 2rpx 2rpx rgba(0, 0, 0, 0.4);
+
+  position: fixed;
+  top: 12%;
+  right: 0;
+  left: 0;
+  margin: auto;
+  
+  z-index: 999;  /* 使其显示在最上面，即地图上面 */
+}
+.icon{
+  width: 50rpx;
+  height: 50rpx;
+
+  position: absolute;
+  left: 20rpx;
+  top: 0;
+
+  /* float: left;
+  margin: 8rpx 0 0 10rpx; */
+}
